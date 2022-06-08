@@ -16,43 +16,25 @@ public class AssetRefernceAudioClip : AssetReferenceT<AudioClip>
 public class AddressablesManager : MonoBehaviour
 {
     [SerializeField]
-    private AssetReference prefabShop;
-
-    [SerializeField]
-    private AssetReference musicAsset;
-
-    [SerializeField]
     private AssetReferenceTexture2D unityLogoAssetReference;
 
     [SerializeField]
     private RawImage rawImageUnityLogo;
 
+    [SerializeField]
+    private WebRequestOverride wro;
+
     private GameObject shop;
 
     private void Start()
     {
+        wro.First();
         Addressables.InitializeAsync().Completed += AddressablesManager_Completed;
     }
 
     private void AddressablesManager_Completed(AsyncOperationHandle<IResourceLocator> obj)
     {
-        prefabShop.InstantiateAsync().Completed += (go) =>
-        {
-            var shop = go.Result;
-            this.shop = shop;
-        };
-
-        musicAsset.LoadAssetAsync<AudioClip>().Completed += (clip) =>
-        {
-            var audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.clip = clip.Result;
-            audioSource.playOnAwake = false;
-            audioSource.loop = true;
-            audioSource.Play();
-        };
-
         unityLogoAssetReference.LoadAssetAsync<Texture2D>();
-        
     }
 
     private void Update()

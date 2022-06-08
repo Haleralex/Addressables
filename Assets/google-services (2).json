@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135208020164",
+    "project_id": "addressables-19455",
+    "storage_bucket": "addressables-19455.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135208020164:android:4f29ff4605880ff3df0191",
+        "android_client_info": {
+          "package_name": "com.TestCompany.Addressables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135208020164-gqpn856ldbf9d4up5483bs71j6fo8hse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBQNtVYcJDufl-4XVlAJa1mi6D3Eh9kxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135208020164-gqpn856ldbf9d4up5483bs71j6fo8hse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
